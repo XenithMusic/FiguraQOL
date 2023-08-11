@@ -133,6 +133,15 @@ public class HostAPI {
             aliases = "title",
             value = "host.set_title"
     )
+    public Object getTitle() {
+        return this.minecraft.gui.getTitle();
+    }
+    public Object getSubtitle() {
+        return this.minecraft.gui.getSubtitle();
+    }
+    public Object getActionbar() {
+        return this.minecraft.gui.getOverlayMessage();
+    }
     public HostAPI setTitle(@LuaNotNil String text) {
         if (isHost())
             this.minecraft.gui.setTitle(TextUtils.tryParseJson(text));
